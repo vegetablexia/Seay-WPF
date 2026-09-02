@@ -1,0 +1,16 @@
+<UserControl x:Class="Seay代码审计工具.Views.WelcomeView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Grid Background="{DynamicResource BgLightBrush}"
+          AllowDrop="True" DragOver="Grid_DragOver" Drop="Grid_Drop">
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="20">
+            <TextBlock Text="Seay源代码审计系统" FontSize="16" FontWeight="Bold"
+                       Foreground="{DynamicResource TextBrush}" HorizontalAlignment="Center" Margin="0,0,0,16"/>
+            <Button Content="打开项目" Style="{DynamicResource PrimaryButtonStyle}"
+                    Width="120" Height="30" Margin="0,4"
+                    Click="btnOpenProject_Click"/>
+            <TextBlock Text="支持拖入文件夹" FontSize="11"
+                       Foreground="{DynamicResource TextDimBrush}" HorizontalAlignment="Center" Margin="0,8,0,0"/>
+        </StackPanel>
+    </Grid>
+</UserControl>

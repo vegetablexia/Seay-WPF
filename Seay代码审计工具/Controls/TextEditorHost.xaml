@@ -1,0 +1,9 @@
+<UserControl x:Class="Seay代码审计工具.Controls.TextEditorHost"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:wf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
+             xmlns:wfh="clr-namespace:System.Windows.Forms.Integration;assembly=WindowsFormsIntegration">
+    <Grid>
+        <wfh:WindowsFormsHost x:Name="wfhHost"/>
+    </Grid>
+</UserControl>

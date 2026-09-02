@@ -1,0 +1,16 @@
+<UserControl x:Class="Seay代码审计工具.Views.WelcomeContent"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Grid Background="{DynamicResource BgBrush}"
+          AllowDrop="True" DragOver="Grid_DragOver" Drop="Grid_Drop">
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" MaxWidth="500">
+            <TextBlock Text="Seay源代码审计系统" FontSize="28" FontWeight="Bold"
+                       Foreground="{DynamicResource TextBrush}" HorizontalAlignment="Center" Margin="0,0,0,8"/>
+            <TextBlock Text="v2.1" FontSize="14"
+                       Foreground="{DynamicResource TextDimBrush}" HorizontalAlignment="Center" Margin="0,0,0,32"/>
+
+            <TextBlock Text="www.cnseay.com" FontSize="12"
+                       Foreground="{DynamicResource TextDimBrush}" HorizontalAlignment="Center" Margin="0,32,0,0"/>
+        </StackPanel>
+    </Grid>
+</UserControl>

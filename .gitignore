@@ -1,0 +1,19 @@
+# Build outputs
+obj/
+[Bb]in/
+.vs/
+*.user
+*.suo
+
+# Main project: keep only runtime assets under bin/Release
+!Seay*/bin/
+Seay*/bin/Debug/
+Seay*/bin/Release/*
+!Seay*/bin/Release/bin/
+!Seay*/bin/Release/config/
+Seay*/bin/Release/bin/*
+!Seay*/bin/Release/bin/php.exe
+!Seay*/bin/Release/bin/php5ts.dll
+!Seay*/bin/Release/bin/json/
+Seay*/bin/Release/bin/json/*
+!Seay*/bin/Release/bin/json/Newtonsoft.Json.dll

@@ -1,0 +1,78 @@
+<UserControl x:Class="Seay代码审计工具.Views.SearchView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Border Grid.Row="0" Padding="12,8" Background="{DynamicResource ControlBrush}">
+            <StackPanel>
+                <TextBlock Text="搜索关键词" FontSize="11" FontWeight="SemiBold"
+                           Foreground="{DynamicResource TextDimBrush}" Margin="0,0,0,4"/>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBox x:Name="txtKeyword" Grid.Column="0" Height="28" FontSize="13"
+                             Style="{DynamicResource DarkTextBoxStyle}"
+                             KeyDown="txtKeyword_KeyDown"/>
+                    <Button x:Name="btnSearch" Grid.Column="1" Content="搜索" Width="64" Height="28"
+                            Style="{DynamicResource PrimaryButtonStyle}" Padding="10,3"
+                            Click="btnSearch_Click" Margin="8,0,0,0"/>
+                </Grid>
+
+                <StackPanel Orientation="Horizontal" Margin="0,10,0,2">
+                    <CheckBox x:Name="chkRegex" Content="正则表达式"
+                              Style="{DynamicResource DarkCheckBoxStyle}"
+                              FontSize="12" Margin="0,0,16,0"/>
+                    <CheckBox x:Name="chkCaseInsensitive" Content="不区分大小写"
+                              Style="{DynamicResource DarkCheckBoxStyle}"
+                              FontSize="12"/>
+                </StackPanel>
+            </StackPanel>
+        </Border>
+
+        <Border Grid.Row="1" Padding="12,4" Background="{DynamicResource BgLightBrush}"
+                BorderBrush="{DynamicResource BorderBrush}" BorderThickness="0,1,0,0">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock x:Name="txtStatus" Grid.Column="0" FontSize="12"
+                           Foreground="{DynamicResource TextDimBrush}"
+                           VerticalAlignment="Center" Text="就绪"/>
+                <StackPanel Grid.Column="1" Orientation="Horizontal">
+                    <Button x:Name="btnStop" Content="停止" Width="60" Height="26"
+                            Style="{DynamicResource SecondaryButtonStyle}" Padding="8,2"
+                            Click="btnStop_Click" Margin="0,0,8,0"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+
+        <ListView x:Name="lvResults" Grid.Row="2"
+                  Background="{DynamicResource ControlBrush}"
+                  Foreground="{DynamicResource TextBrush}"
+                  BorderThickness="0" FontSize="12"
+                  MouseDoubleClick="lvResults_DoubleClick">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="ID" Width="40" DisplayMemberBinding="{Binding Id}"/>
+                    <GridViewColumn Header="文件" Width="250" DisplayMemberBinding="{Binding FilePath}"/>
+                    <GridViewColumn Header="匹配内容" Width="500" DisplayMemberBinding="{Binding MatchContent}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+        <Border Grid.Row="3" Padding="12,4" Background="{DynamicResource ControlBrush}">
+            <TextBlock x:Name="txtResultCount" FontSize="11"
+                       Foreground="{DynamicResource TextDimBrush}"
+                       Text="共 0 条结果"/>
+        </Border>
+    </Grid>
+</UserControl>
