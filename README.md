@@ -1,5 +1,5 @@
 # Seay 源代码审计系统（WPF 重构版）
-
+ai真好用
 基于经典 PHP 代码审计工具 **Seay 源代码审计系统** 的界面重构版本，使用 WPF 重写了全部界面，采用 VS Code 风格深色主题。
 
 > 原版工具及规则库版权归作者（Seay / www.cnseay.com）所有，本项目仅用于学习交流。
@@ -41,10 +41,6 @@ Project/                     ICSharpCode.TextEditor 代码编辑控件库
 CSPluginKernel/              插件内核库
 ```
 
-## 已知待办
-
-- [ ] 插件系统与设置页面迁移
-- [ ] 清理历史遗留的 WinForms 代码
 
 ## 致谢
 
